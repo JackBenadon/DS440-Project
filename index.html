@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stats for Soccer!</title>
+    <style>
+        h1 {
+            color: blue;
+            font-family: Arial;
+            text-align: center;
+        }
+        .search-container {
+            text-align: center;
+        }
+        #searchInput {
+            width: 200px; /* Adjust width as needed */
+        }
+        #soccer-image {
+            display: block; /* Ensures the image is displayed as a block element */
+            margin: 0 auto; /* Center the image horizontally */
+            width: 1000px; /* Adjust the width as needed */
+            height: 600px;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+
+    
+</head>
+<body>
+    <h1 id="title">Welcome to __ Page</h1>
+
+
+    <script>
+        var params = window.location.search.replace('?name=', "")
+        var name = params.replaceAll("%20", " ")
+
+        document.getElementById("title").innerText = name + " Page"
+        console.log(name)
+        
+var data = []
+
+console.log(data)
+
+const loadData = async () => {
+    data = await fetch('data.csv').then(r => r.text())
+    data = data.split('\n')
+    
+    data = data.slice(1, data.length - 1)
+
+    console.log(data)
+
+
+}
+loadData()
+
+    </script>
+       
+</body>
+</html>

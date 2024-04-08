@@ -1,0 +1,38 @@
+/* Styles for the search bar and suggestions */
+#searchInput {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-container {
+    position: relative; /* Ensure the container is positioned relative */
+}
+
+#suggestions {
+    /*
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 300px; 
+    max-height: 150px;
+    overflow-y: auto;
+    margin: 0 auto; 
+    */
+    position: absolute;
+    top: 100%; /* Position suggestions below the search bar */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 300px; /* Adjust width as needed */
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #fff; /* Optional: Add a background color */
+    z-index: 1; /* Ensure suggestions appear above other elements */
+}
+
+#suggestions div {
+    padding: 5px;
+    cursor: pointer;
+}
+
