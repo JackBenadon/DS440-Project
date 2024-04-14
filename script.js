@@ -1,9 +1,8 @@
-// Sample data - Replace this with your own data source
 
 var data = []
 
 const loadData = async () => {
-    data = await fetch('data.csv').then(r => r.text())
+    data = await fetch('data.csv').then(r => r.text()) 
     data = data.split('\n')
     
     data = data.slice(1, data.length - 1)
@@ -32,12 +31,13 @@ function showSuggestions() {
 
     matches.forEach(function(match) {
         var suggestion = document.createElement("div");
-        suggestion.textContent = match;
+        suggestion.textContent = match.split(",")[0].replace(/"/g, '');;
 
         suggestion.onclick = function() {
+            var selectedValue = match
             document.getElementById("searchInput").value = match;
             suggestionsDiv.innerHTML = "";
-            window.location.href = "/player"; // Redirecting to player.html
+            window.location.href = "/player.html?title=" + encodeURIComponent(selectedValue); // Redirecting to player.html
 
         };
         suggestionsDiv.appendChild(suggestion);

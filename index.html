@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Stats for Soccer!</title>
     <style>
         h1 {
+            /* http://127.0.0.1:5500/ */
+            /* Go live button at the bottom*/
             color: blue;
             font-family: Arial;
             text-align: center;
@@ -12,12 +15,12 @@
             text-align: center;
         }
         #searchInput {
-            width: 200px; /* Adjust width as needed */
+            width: 200px; 
         }
         #soccer-image {
-            display: block; /* Ensures the image is displayed as a block element */
-            margin: 0 auto; /* Center the image horizontally */
-            width: 1000px; /* Adjust the width as needed */
+            display: block; 
+            margin: 0 auto; 
+            width: 1000px; 
             height: 600px;
         }
     </style>
@@ -26,33 +29,16 @@
     
 </head>
 <body>
-    <h1 id="title">Welcome to __ Page</h1>
+    <h1>Welcome to Stats for Soccer</h1>
 
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="showSuggestions()" placeholder="Search a player...">
+        <div id="suggestions"></div>
+    </div>
 
-    <script>
-        var params = window.location.search.replace('?name=', "")
-        var name = params.replaceAll("%20", " ")
+    <img id="soccer-image" src="soccer-image2.jpg" alt="Soccer Image">
 
-        document.getElementById("title").innerText = name + " Page"
-        console.log(name)
-        
-var data = []
-
-console.log(data)
-
-const loadData = async () => {
-    data = await fetch('data.csv').then(r => r.text())
-    data = data.split('\n')
-    
-    data = data.slice(1, data.length - 1)
-
-    console.log(data)
-
-
-}
-loadData()
-
-    </script>
+    <script src="script.js"></script>
        
 </body>
 </html>

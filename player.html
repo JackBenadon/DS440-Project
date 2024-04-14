@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #e9e4e4;
+        }
+        h1 { 
+            color: black;
+            font-family: Arial;
+            text-align: center;
+            font-size: 36px;
+        }
+        .info-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: -25px;
+        }
+        #nation {
+            margin-right: 100px; 
+        }
+        h2, h3 {
+            color: black;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .info-container2 {
+            display: flex;
+            align-items: center;
+        }
+        #team {
+            margin-right: 100px;
+        }
+        h4, h5 {
+            color: black;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .divider {
+            width: 30%;
+            border-bottom: 1px solid black; /* Adds a solid black line */
+            margin: 10px 0; 
+        }
+        .attacking-container{
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        #goals, #assists {
+            margin-right: 100px;
+            font-weight: bold;
+        }
+        h7, h8 {
+            color: red;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .attacking-container2{
+            display: flex;
+            align-items: center;
+        }
+        #xG, #SoT {
+            margin-right: 100px;
+            font-weight: bold;
+        }
+        h9, h10 {
+            color: red;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .divider2 {
+            width: 30%;
+            border-bottom: 1px solid black; 
+            margin: 10px 0; 
+        }
+        .defense-container{
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        #tackles, #interceptions {
+            margin-right: 100px;
+            font-weight: bold;
+        }
+        h11, h12 {
+            color: purple;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .defense-container2{
+            display: flex;
+            align-items: center;
+        }
+        #blocks, #PPC {
+            margin-right: 100px;
+            font-weight: bold;
+        }
+        h13, h14 {
+            color: purple;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .divider3 {
+            width: 30%;
+            border-bottom: 1px solid black; 
+            margin: 10px 0; 
+        }
+        .misc-container{
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        #matches{
+            margin-right: 100px;
+            font-weight: bold;
+        }
+        h15{
+            color: blue;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .misc-container2{
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px
+        }
+        #yellowCards, #redCards {
+            margin-right: 100px;
+            font-weight: bold;
+        }
+        h17, h18 {
+            color: blue;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .market-values {
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        .predictions {
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        #transferMarkt{
+            color: black;
+            font-size: 36px;
+            font-family: Impact;
+            margin-right: 300px; 
+            margin-top: -450px;  
+            z-index: 2;         
+        }
+        #predictedValue {
+            color: black;
+            font-size: 36px;
+            font-family: Impact;
+            margin-right: 300px; 
+            margin-top: -375px;  
+            z-index: 1;
+        }
+        .blue-square {
+            width: 950px; 
+            height: 400px; 
+            background-color: rgb(223, 241, 117); 
+            position: fixed; 
+            top: 50%; 
+            right: 0; 
+            transform: translateY(-50%); 
+            z-index: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 id="pageTitle">Welcome to __ Page</h1>  
+    <div class="info-container">
+        <h2 id="nation">Nationality</h2>
+        <h3 id="position">Position</h3>
+    </div>
+    <div class="info-container2">
+        <h4 id="team">Team</h4>
+        <h5 id="age">Age</h5>
+    </div>
+    <div class="divider"></div> 
+    <div class="attacking-container">
+        <h7 id="goals">Goals</h7>
+        <h8 id="assists">Assists</h8>
+    </div>
+    <div class="attacking-container2">
+        <h9 id="xG">xG</h9>
+        <h10 id="SoT">SoT</h10>
+    </div>
+    <div class="divider2"></div> 
+    <div class="defense-container">
+        <h11 id="tackles">Tackles</h11>
+        <h12 id="interceptions">Interceptions</h12>
+    </div>
+    <div class="defense-container2">
+        <h13 id="blocks">Blocks</h13>
+        <h14 id="PPC">Percent Passes Completed</h14>
+    </div>
+    <div class="divider3"></div>
+    <div class="misc-container">
+        <h15 id="matches">Matches</h15>
+    </div>
+    <div class="misc-container2">
+        <h17 id="yellowCards">Yellow Cards</h17>
+        <h18 id="redCards">Red Cards</h18>
+    </div>
+    <div class="market-values">
+        <h19 id="transferMarkt">TransferMarkt Value</h19>
+    </div>
+    <div class="predictions">
+        <h20 id="predictedValue">Predicted Value</h20>
+    </div>
+    <div class="blue-square"></div>
+    <script src="playerScript.js"></script>       
+</body>
+</html>
